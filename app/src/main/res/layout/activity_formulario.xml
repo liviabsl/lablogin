@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_10"
+    tools:context=".formulario">
+
+    <EditText
+        android:id="@+id/main_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter your first name"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter your last name"
+        android:textColor="@color/black"
+        android:padding="2dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/main_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/last_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Save"
+        app:cornerRadius="20dp"
+
+        />
+
+    <Button
+        android:id="@+id/display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="Display"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

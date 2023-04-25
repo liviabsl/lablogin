@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:id="@+id/txtEntrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Registre-se!"
+        android:layout_marginTop="25dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img"
+
+        />
+
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insira suas informações"
+        android:textSize="15sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtEntrar"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/texto"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:inputType="textPassword"
+        />
+
+    <ImageView
+        android:id="@+id/eye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/eye"
+        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintRight_toRightOf="@+id/password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="350dp"/>
+
+    <ProgressBar
+
+        android:id="@+id/pgbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+
+
+        />
+
+    <Button
+        android:id="@+id/botaoEntrar"
+        android:shadowColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pgbar"
+        android:layout_marginTop="15dp"
+        android:text="Registrar"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/regNow"
+        android:text="Ir para login"
+        app:layout_constraintTop_toBottomOf="@+id/botaoEntrar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
