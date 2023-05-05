@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -34,16 +36,33 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        
+        holder.id.setText(String.valueOf(id.get(position)));
+        holder.fName.setText(String.valueOf(fName.get(position)));
+        holder.lName.setText(String.valueOf(lName.get(position)));
+
+
+
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+
+        return id.size();
     }
 
-    @NonNull
+    public class MyViewHolder extends  RecyclerView.ViewHolder{
+
+        TextView id, fName, lName;
+
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+            id = itemView.findViewById(R.id.person_id);
+            fName = itemView.findViewById(R.id.first_name);
+            lName = itemView.findViewById(R.id.last_name);
+        }
+    }
+    
 
 
 }

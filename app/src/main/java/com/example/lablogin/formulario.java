@@ -71,7 +71,7 @@ public class formulario extends AppCompatActivity {
                 String fName = mFname.getText().toString();
                 String lName = mLname.getText().toString();
 
-                MyDataBaseHelper myDB = new MyDataBaseHelper(MainActivity.this);
+                MyDataBaseHelper myDB = new MyDataBaseHelper(formulario.this);
                 myDB.addPerson(fName.trim(), lName.trim());
 
             }
@@ -81,9 +81,9 @@ public class formulario extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                MyDataBaseHelper myDB = new MyDataBaseHelper(MainActivity.this);
+                MyDataBaseHelper myDB = new MyDataBaseHelper(formulario.this);
 
-                Intent intent = new Intent(MainActivity.this, display.class);
+                Intent intent = new Intent(formulario.this, display.class);
                 startActivity(intent);
 
             }
